@@ -1,10 +1,11 @@
 
 
-export default function Header({title}){
+// export default function Header({title}){
 
-    return(
-        <div>
-        {title}
-        </div>
-    )
-}
+//     console.log("rendered")
+//     return(
+//         <div>
+//         {title}
+//         </div>
+//     )
+// }
