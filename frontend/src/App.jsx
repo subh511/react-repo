@@ -1,13 +1,19 @@
-import Header from "./components/Header"
+import { useState } from "react";
+import Header from "./components/Header";
 
 function App() {
+  let [title, setTitle] = useState("samrat");
 
+  function updateTitle() {
+    setTitle("my name is " + Math.random());
+  }
   return (
     <>
-    <Header title= "samrat 1"/>
-    <Header title= "samrat 2"/>
+      <button onClick={updateTitle}>Click Me to change the title</button>
+      <Header title={title} />
+      <Header title="samrat 2" />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
