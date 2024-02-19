@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export default function Todo(title,description){
+export default function Todo(){
 
     const [todos,setTodos] = useState([{
         id:1,
@@ -19,25 +19,26 @@ export default function Todo(title,description){
 
     function addTodo(){
         //1st way to insert a todos;
-        setTodos(...todos,{
+        // ...spread operator helps to spread all existing todos and adds a new todos
+        setTodos([...todos,{
             id:4,
             description: Math.random(),
             title: Math.random()
-        })
+        }])
 
         //2nd way to add todos;
 
-        let newTodos = [];
+        // let newTodos = [];
 
-        for(let i=0; i< todos.length; i++){
-            newTodos.push(todos[i])
-        }
-        newTodos.push({
-                id:4,
-                description: Math.random(),
-                title: Math.random()
-        })
-        setTodos(newTodos)
+        // for(let i=0; i< todos.length; i++){
+        //     newTodos.push(todos[i])
+        // }
+        // newTodos.push({
+        //         id:4,
+        //         description: Math.random(),
+        //         title: Math.random()
+        // })
+        // setTodos(newTodos)
     }
 
     return(
@@ -48,7 +49,7 @@ export default function Todo(title,description){
                 return(
                     <div key={elem.id}>
                     <h1>{elem.title}</h1>
-                    <h2>{elem.descriptiondescription}</h2>
+                    <h2>{elem.description}</h2>
                     </div>
                 )
             })
