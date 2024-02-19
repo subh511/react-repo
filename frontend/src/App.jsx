@@ -1,13 +1,27 @@
 import React from "react";
-import UseEffect from "./components/UseEffect";
+//import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
 
-//import { useState } from "react";
+import { useState,useEffect } from "react";
 
 function App() {
+
+  const [todos,setTodos] = useState([])
+
+  useEffect(()=>{
+      fetch(`https://sum-server.100xdevs.com/todos`)
+      .then(async function(res){
+          const json = await res.json();
+          setTodos(json.todos)
+      })
+  },[])
+
   return (
     <div>
-    <UseEffect/>
+    {
+
+        todos.map((elem)=> <Todo key={elem.id} title={elem.title} description={elem.description}/>)
+    }
     </div>
   );
   //<CardWrapper>hi there!</CardWrapper>
@@ -19,13 +33,23 @@ function App() {
   // )
 }
 
-function CardWrapper({ children }) {
-  return (
-    <div style={{ border: "2px solid black", padding: "20px" }}>
-      {children}
-    </div>
-  );
+function Todo(description,title){
+
+  return(
+      <div>
+      <h1>{title}</h1>
+      <h2>{description}</h2>
+      </div>
+  )
 }
+
+// function CardWrapper({ children }) {
+//   return (
+//     <div style={{ border: "2px solid black", padding: "20px" }}>
+//       {children}
+//     </div>
+//   );
+// }
 
 //should be entered into the App component;
 
