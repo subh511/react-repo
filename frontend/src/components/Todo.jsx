@@ -24,6 +24,20 @@ export default function Todo(title,description){
             description: Math.random(),
             title: Math.random()
         })
+
+        //2nd way to add todos;
+
+        let newTodos = [];
+
+        for(let i=0; i< todos.length; i++){
+            newTodos.push(todos[i])
+        }
+        newTodos.push({
+                id:4,
+                description: Math.random(),
+                title: Math.random()
+        })
+        setTodos(newTodos)
     }
 
     return(
