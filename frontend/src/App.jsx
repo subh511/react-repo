@@ -1,4 +1,5 @@
 import React from "react";
+import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
 
 //import { useState } from "react";
@@ -6,9 +7,11 @@ import React from "react";
 function App() {
   return (
     <div>
-      <CardWrapper>hi there!</CardWrapper>
+    <UseEffect/>
     </div>
   );
+  //<CardWrapper>hi there!</CardWrapper>
+  //<CardWrapper>Another card</CardWrapper>
   // return(
   //   <div>
   //   <Todo/>
