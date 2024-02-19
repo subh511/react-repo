@@ -1,33 +1,44 @@
 import React from "react";
-import Todo from "./components/Todo";
+//import Todo from "./components/Todo";
 
 //import { useState } from "react";
 
 function App() {
-
-  return(
+  return (
     <div>
-    <Todo/>
+      <CardWrapper>hi there!</CardWrapper>
     </div>
-  )
+  );
+  // return(
+  //   <div>
+  //   <Todo/>
+  //   </div>
+  // )
 }
 
+function CardWrapper({ children }) {
+  return (
+    <div style={{ border: "2px solid black", padding: "20px" }}>
+      {children}
+    </div>
+  );
+}
 
-  //should be entered into the App component;
+//should be entered into the App component;
 
-  // let [title, setTitle] = useState("samrat");
+// let [title, setTitle] = useState("samrat");
 
-  // function updateTitle() {
-  //   setTitle("my name is " + Math.random());
-  // }
-  // return (
-  //   <div>
-  //     <button onClick={updateTitle}>Click Me to change the title</button>
-  //     <Header title={title} />
-  //     <Header title="Samrat!" />
-  //     <Header title="Samrat Doe!" />
-  //   </div>
-  // );
+// function updateTitle() {
+//   setTitle("my name is " + Math.random());
+// }
+// return (
+//   <div>
+//     <button onClick={updateTitle}>Click Me to change the title</button>
+//     <Header title={title} />
+//     <Header title="Samrat!" />
+//     <Header title="Samrat Doe!" />
+//   </div>
+// );
 
 //2nd way
 
@@ -59,10 +70,10 @@ function App() {
 
 //introduced react memo for avoiding of re-rendering!!
 
-//2nd way 
+//2nd way
 
 // const Header = React.memo(function Header({ title }) {
-  //console.log("rendered");
+//console.log("rendered");
 //   return <div>{title}</div>;
 // });
 
