@@ -55,24 +55,25 @@ export default function GetTodo(){
     return(
         <div>
         {
-            todos.map((elem)=>{
-                return<div key={elem.id}>
-                <h1>{elem.title}</h1>
-                <h2>{elem.description}</h2>
-                </div>
-            })
+            todos.map(todo => <Todo key={todo.title} title={todo.title} description={todo.description}/>)
         }
         </div>
         )
 }
 
-// todos.map(todo => <Todo key={todo.title} title={todo.title} description={todo.description}/>)
-// function Todo({title,description}){
+// todos.map((elem)=>{
+//     return<div key={elem.id}>
+//     <h1>{elem.title}</h1>
+//     <h2>{elem.description}</h2>
+//     </div>
+// })
 
-//     return(
-//         <>
-//         <h2>{title}</h2>
-//         <h2>{description}</h2>
-//         </>
-//     )
-// }
+function Todo({title,description}){
+
+    return(
+        <>
+        <h2>{title}</h2>
+        <h2>{description}</h2>
+        </>
+    )
+}
