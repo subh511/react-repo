@@ -1,29 +1,33 @@
 import React from "react";
+import GetTodo from "./components/GetTodo";
 //import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
 
-import { useState,useEffect } from "react";
+//import { useState,useEffect } from "react";
 
 function App() {
 
-  const [todos,setTodos] = useState([])
+  // const [todos,setTodos] = useState([])
 
-  useEffect(()=>{
-      fetch(`https://sum-server.100xdevs.com/todos`)
-      .then(async function(res){
-          const json = await res.json();
-          setTodos(json.todos)
-      })
-  },[])
+  // useEffect(()=>{
+  //     fetch(`https://sum-server.100xdevs.com/todos`)
+  //     .then(async function(res){
+  //         const json = await res.json();
+  //         setTodos(json.todos)
+  //     })
+  // },[])
 
   return (
     <div>
-    {
-
-        todos.map((elem)=> <Todo key={elem.id} title={elem.title} description={elem.description}/>)
-    }
+    hi there!
+    <GetTodo/>
     </div>
   );
+
+    // {
+
+    //     todos.map((elem)=> <Todo key={elem.id} title={elem.title} description={elem.description}/>)
+    // }
   //<CardWrapper>hi there!</CardWrapper>
   //<CardWrapper>Another card</CardWrapper>
   // return(
@@ -33,15 +37,15 @@ function App() {
   // )
 }
 
-function Todo(description,title){
+// function Todo(description,title){
 
-  return(
-      <div>
-      <h1>{title}</h1>
-      <h2>{description}</h2>
-      </div>
-  )
-}
+//   return(
+//       <div>
+//       <h1>{title}</h1>
+//       <h2>{description}</h2>
+//       </div>
+//   )
+// }
 
 // function CardWrapper({ children }) {
 //   return (
