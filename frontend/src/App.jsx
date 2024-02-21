@@ -1,5 +1,8 @@
-import React from "react";
-import FetchingData from "./components/FetchingData";
+//import React from "react";
+import { useEffect, useState } from "react";
+import axios from "react";
+//import FetchingData from "./components/FetchingData";
+//import FetchingEndpoint from "./components/FetchingEndpoint";
 //import GetTodo from "./components/GetTodo";
 //import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
@@ -7,27 +10,54 @@ import FetchingData from "./components/FetchingData";
 //import { useState,useEffect } from "react";
 
 function App() {
-
-  // const [todos,setTodos] = useState([])
-
-  // useEffect(()=>{
-  //     fetch(`https://sum-server.100xdevs.com/todos`)
-  //     .then(async function(res){
-  //         const json = await res.json();
-  //         setTodos(json.todos)
-  //     })
-  // },[])
-
   return (
     <div>
-    <FetchingData/>
+      <Todo id={1} />
     </div>
   );
 
-    // {
+  // function Todo({ id }) {
 
-    //     todos.map((elem)=> <Todo key={elem.id} title={elem.title} description={elem.description}/>)
-    // }
+  //   const [todo, setTodo] = useState({});
+
+  //   useEffect(() => {
+  //     axios.get("https://sum-server.100xdevs.com/todo?id=" + id)
+  //       .then(response => {
+  //         setTodo(response.data.todo);
+  //       });
+  //   }, []);
+
+  //   return (
+  //     <div>
+  //       <h1>{todo.title}</h1>
+  //       <h2>{todo.description}</h2>
+  //     </div>
+  //   );
+  // }
+
+  function Todo({id}) {
+    const [todos, setTodos] = useState({})
+    useEffect(()=>{
+      axios.get(`https://sum-server.100xdevs.com/todo?id=${id}`)
+      .then(response=>{
+        setTodos(response.data.todo)
+      })
+    },[id])
+  
+    return(
+      <div>
+        <h1>{todos.title}</h1>
+        <h4>{todos.description}</h4>
+      </div>
+    )
+  }
+
+  //<FetchingData/>
+
+  // {
+
+  //     todos.map((elem)=> <Todo key={elem.id} title={elem.title} description={elem.description}/>)
+  // }
   //<CardWrapper>hi there!</CardWrapper>
   //<CardWrapper>Another card</CardWrapper>
   // return(
