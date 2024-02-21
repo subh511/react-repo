@@ -1,8 +1,8 @@
 //import React from "react";
-import { useEffect, useState } from "react";
-import axios from "react";
+//import { useEffect, useState } from "react";
+//import axios from "react";
 //import FetchingData from "./components/FetchingData";
-//import FetchingEndpoint from "./components/FetchingEndpoint";
+import FetchingEndpoint from "./components/FetchingEndpoint";
 //import GetTodo from "./components/GetTodo";
 //import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
@@ -10,11 +10,38 @@ import axios from "react";
 //import { useState,useEffect } from "react";
 
 function App() {
+  // const [selectedId, setSelectedId] = useState(1);
+
   return (
     <div>
-      <Todo id={1} />
+    <FetchingEndpoint/>
     </div>
   );
+}
+
+// <button onClick={function () {setSelectedId(1)}}>1</button>
+// <button onClick={function () {setSelectedId(2)}}>2</button>
+// <button onClick={function () {setSelectedId(3)}}>3</button>
+// <button onClick={function () {setSelectedId(4)}}>4</button>
+// <Todo id={selectedId} />
+
+  // function Todo({id}) {
+  //   const [todos, setTodos] = useState({});
+  //   useEffect(() => {
+  //     axios
+  //       .get(`https://sum-server.100xdevs.com/todo?id=${id}`)
+  //       .then((response) => {
+  //         setTodos(response.data.todo);
+  //       });
+  //   }, [id]);
+
+  //   return (
+  //     <div>
+  //       <h1>{todos.title}</h1>
+  //       <h4>{todos.description}</h4>
+  //     </div>
+  //   );
+  // }
 
   // function Todo({ id }) {
 
@@ -35,23 +62,6 @@ function App() {
   //   );
   // }
 
-  function Todo({id}) {
-    const [todos, setTodos] = useState({})
-    useEffect(()=>{
-      axios.get(`https://sum-server.100xdevs.com/todo?id=${id}`)
-      .then(response=>{
-        setTodos(response.data.todo)
-      })
-    },[id])
-  
-    return(
-      <div>
-        <h1>{todos.title}</h1>
-        <h4>{todos.description}</h4>
-      </div>
-    )
-  }
-
   //<FetchingData/>
 
   // {
@@ -65,7 +75,6 @@ function App() {
   //   <Todo/>
   //   </div>
   // )
-}
 
 // function Todo(description,title){
 
