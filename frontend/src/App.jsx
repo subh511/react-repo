@@ -1,5 +1,6 @@
 import React from "react";
-import GetTodo from "./components/GetTodo";
+import FetchingData from "./components/FetchingData";
+//import GetTodo from "./components/GetTodo";
 //import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
 
@@ -19,8 +20,7 @@ function App() {
 
   return (
     <div>
-    hi there!
-    <GetTodo/>
+    <FetchingData/>
     </div>
   );
 
