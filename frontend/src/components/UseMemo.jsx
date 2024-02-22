@@ -19,7 +19,7 @@ export default function UseMemo() {
       <br />
       <button onClick={function(){
         setCounter(counter + 1)
-      }}>counter {counter}</button>
+      }}>counter ({counter})</button>
     </div>
   );
 }
