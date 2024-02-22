@@ -5,12 +5,19 @@ export default function UseMemo() {
   const [inputValue, setInputValue] = useState(1);
 
 
+  //useMemo is used for handling expensive calculation operation;
+  //it is least used operation;
+
+  //useEffect is used for effect on re-rendering;
+  //but this hook is widely used in day to day life;
+
   let count = useMemo(()=>{
-    let count = 0;
+    console.log("memo is got called!")
+    let finalCount = 0;
     for (let i = 1; i < inputValue; i++) {
-      count = count + i;
+      finalCount = finalCount + i;
     }
-    return count;
+    return finalCount;
   },[inputValue])
 
   return (

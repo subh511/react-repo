@@ -3,7 +3,8 @@
 //import axios from "react";
 //import FetchingData from "./components/FetchingData";
 //import FetchingEndpoint from "./components/FetchingEndpoint";
-import UseMemo from "./components/UseMemo";
+import UseCallback from "./components/UseCallback";
+//import UseMemo from "./components/UseMemo";
 //import GetTodo from "./components/GetTodo";
 //import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
@@ -15,10 +16,12 @@ function App() {
 
   return (
     <div>
-    <UseMemo/>
+    <UseCallback/>
     </div>
   );
 }
+
+//<UseMemo/>
 
 //   <FetchingEndpoint/>
 
