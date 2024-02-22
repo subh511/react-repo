@@ -15,8 +15,11 @@ export default function UseMemo() {
         setInputValue(event.target.value)
       }}/>
       <br />
+      Sum from 1 to {inputValue} is {count}
       <br />
-      <button>counter {counter}</button>
+      <button onClick={function(){
+        setCounter(counter + 1)
+      }}>counter {counter}</button>
     </div>
   );
 }
