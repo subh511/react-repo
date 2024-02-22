@@ -2,7 +2,8 @@
 //import { useEffect, useState } from "react";
 //import axios from "react";
 //import FetchingData from "./components/FetchingData";
-import FetchingEndpoint from "./components/FetchingEndpoint";
+//import FetchingEndpoint from "./components/FetchingEndpoint";
+import UseMemo from "./components/UseMemo";
 //import GetTodo from "./components/GetTodo";
 //import UseEffect from "./components/UseEffect";
 //import Todo from "./components/Todo";
@@ -14,10 +15,12 @@ function App() {
 
   return (
     <div>
-    <FetchingEndpoint/>
+    <UseMemo/>
     </div>
   );
 }
+
+//   <FetchingEndpoint/>
 
 // <button onClick={function () {setSelectedId(1)}}>1</button>
 // <button onClick={function () {setSelectedId(2)}}>2</button>
