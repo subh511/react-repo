@@ -3,18 +3,21 @@ import { useState } from "react";
 
 export default function UseMemo(){
 
-    const [count,setCount] = useState(0)
+    const [counter,setCounter] = useState(0)
+    const [inputValue,setInputValue] = useState(1)
 
-    // function addCount(){
+    let count = 0;
+    for(let i=1; i<inputValue; i++){
+        count = count+i;
+    }
 
-    // }
 
     return(
         <div>
         <input type="text" placeholder="input area"/>
         <br/>
         <br/>
-        <button>counter {count}</button>
+        <button>counter {counter}</button>
         </div>
     )
 }
